@@ -11,7 +11,7 @@ import SwiftUI
 struct HabitlyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }
