@@ -29,9 +29,22 @@
 		488097482D0F2B8E0021163C /* HabitlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		48F762832D154CE800C79E83 /* Exceptions for "Habitly" folder in "Habitly" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4880972D2D0F2B8D0021163C /* Habitly */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		488097302D0F2B8D0021163C /* Habitly */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				48F762832D154CE800C79E83 /* Exceptions for "Habitly" folder in "Habitly" target */,
+			);
 			path = Habitly;
 			sourceTree = "<group>";
 		};
@@ -399,6 +412,7 @@
 				DEVELOPMENT_TEAM = H3FHDPVMRW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Habitly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Habitly;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -429,6 +443,7 @@
 				DEVELOPMENT_TEAM = H3FHDPVMRW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Habitly/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Habitly;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

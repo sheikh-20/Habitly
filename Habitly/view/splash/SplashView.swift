@@ -20,18 +20,18 @@ struct SplashView: View {
                 
                 VStack(alignment: .center) {
                     
-                    Image("Newsline")
+                    Image("Habitly")
                         .resizable()
                         .scaledToFill()
-                        .frame(width: 100, height: 100)
+                        .frame(width: 200, height: 200)
                     
                     Text("Habitly")
-                        .font(.title)
+                        .font(Font.custom("PerfectlyAmicable", size: 46))
                         .fontWeight(.semibold)
-                        .padding()
+                        .foregroundColor(.white)
                 }
                 
-                CustomCircularLoadingView(lineWidth: 8, color: Color(hex:0xFF147a72), size: 50)
+                CustomCircularLoadingView(lineWidth: 8, color: Color.white, size: 50)
                     .frame(maxHeight: .infinity, alignment: .bottom)
                     .padding(.bottom, 50)
                 }
@@ -43,6 +43,9 @@ struct SplashView: View {
                 }
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(primaryColor)
+        
     }
 }
 

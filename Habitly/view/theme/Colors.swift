@@ -18,4 +18,4 @@ let lightThemeSocialButtonColor = Color(hex: 0xFFFFFFFF)
 let darkThemeSocialButtonColor = Color(hex: 0xFF1f222a)
 
 let elevatedButtonColor = Color(hex: 0xFF19998e)
-let primaryColor = Color(hex: 0xFF229789)
+let primaryColor = Color(hex: 0xFF8985e9)
