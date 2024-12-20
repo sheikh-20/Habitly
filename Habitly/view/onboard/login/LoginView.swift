@@ -17,18 +17,18 @@ struct LoginView: View {
         
             Spacer()
             
-            Image("Newsline")
+            Image("Habitly2")
                 .resizable()
                 .scaledToFill()
                 .frame(width: 100, height: 100)
             
             
-            Text("Newsline")
+            Text("Habitly")
                 .font(.title)
                 .fontWeight(.semibold)
                 .padding()
             
-            Text("Welcome! Let's dive in into your account!")
+            Text("Let's dive in into your account!")
                 .font(.body)
                 .padding(.horizontal)
                 .padding(.bottom)
