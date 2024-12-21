@@ -28,14 +28,19 @@ struct OnboardView: View {
                             Spacer()
                             
                             Text(onboardContent[index].title)
-                                .font(.title)
+                                .font(Font.custom("PerfectlyAmicable", size: 36))
                                 .fontWeight(.semibold)
-                                .padding(.bottom, 4)
-                                .frame(maxWidth: .infinity, alignment: .leading)  // Aligns the title text to the leading edge
+                                .padding(.bottom, 10)
+                                .lineSpacing(6.0)
+                                .multilineTextAlignment(.center)
+                                .frame(maxWidth: .infinity, alignment: .center)
                             
                             Text(onboardContent[index].subTitle)
-                                .font(.body)
-                                .frame(maxWidth: .infinity, alignment: .leading)  // Aligns the subtitle text to the leading edge
+                                .font(Font.custom("PerfectlyAmicable", size: 20))
+                                .opacity(0.5)
+                                .lineSpacing(4.0)
+                                .multilineTextAlignment(.center)
+                                .frame(maxWidth: .infinity, alignment: .center)
                         
                         }
                         .padding(.horizontal)
@@ -53,13 +58,15 @@ struct OnboardView: View {
                 }
                 .padding(.top)
                 .padding(.leading, 20)
+                .frame(maxWidth: .infinity, alignment: .center)
     
                 Divider().padding(.vertical)
                 
                 HStack(spacing: 16) {
                     
                     if currentPage != (onboardContent.count - 1) {
-                        Button(action: { }, label: { Text("Skip").fontWeight(.semibold) })
+                        Button(action: { }, label: { Text("Skip")  .font(Font.custom("PerfectlyAmicable", size: 22))
+                            .fontWeight(.semibold) })
                             .buttonStyle(OutlinedButtonStyle())
                             .frame(maxWidth: .infinity)
                     }
@@ -68,9 +75,13 @@ struct OnboardView: View {
                                                label: {
                                             if currentPage == (onboardContent.count - 1)  {
                                                 NavigationLink(destination: LoginView()) {
-                                                    Text("Continue").fontWeight(.semibold)
+                                                    Text("Let's Get Started")
+                                                        .font(Font.custom("PerfectlyAmicable", size: 22))
+                                                        .fontWeight(.semibold)
                                                 }
-                                            } else { Text("Continue").fontWeight(.semibold) }
+                                            } else { Text("Continue")
+                                                    .font(Font.custom("PerfectlyAmicable", size: 22))
+                                                .fontWeight(.semibold) }
                                         })
                                             .buttonStyle(ElevatedButtonStyle())
                                             .frame(maxWidth: .infinity)
