@@ -10,7 +10,7 @@ import Foundation
 class OnboardRepository {
     static func getOnboardContent() -> [OnboardModel] {
         return [
-            OnboardModel(title: "Welcome to Habitly - Your Personal Habit Tracker!", subTitle: "Take controlof your habits and transform your life with Habitly. Let's get started on your journey to success."),
+            OnboardModel(title: "Welcome to Habitly - Your Personal Habit Tracker!", subTitle: "Take control of your habits and transform your life with Habitly. Let's get started on your journey to success!"),
             
             OnboardModel(title: "Explore Habitly Features for Your Journey!", subTitle: "With intuitive habit creation and insightful progress tracking. Habitly makes it easy to stay focused, motivated and accountable."),
             
