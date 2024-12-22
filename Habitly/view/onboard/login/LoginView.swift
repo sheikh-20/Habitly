@@ -14,24 +14,96 @@ struct LoginView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 16.0) {
-        
-            Spacer()
             
             Image("Habitly2")
                 .resizable()
                 .scaledToFill()
                 .frame(width: 100, height: 100)
+                .padding(.top, 16)
             
-            
-            Text("Habitly")
-                .font(.title)
+            Text("Let's Get Started!")
+                .font(Font.custom("PerfectlyAmicable", size: 36))
                 .fontWeight(.semibold)
-                .padding()
+                .lineSpacing(6.0)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.top, 8)
             
-            Text("Let's dive in into your account!")
-                .font(.body)
+            Text("Let's dive in into your account")
+                .font(Font.custom("PerfectlyAmicable", size: 20))
+                .opacity(0.5)
+                .lineSpacing(4.0)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.horizontal)
                 .padding(.bottom)
+        
+            Spacer()
+            
+            VStack(spacing: 16.0) {
+                Button(
+                    action: {
+                        // Your action here
+                    },
+                    label: {
+                        HStack {
+                            Image("ic_google") // Replace with your Google logo image name
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .padding(.trailing, 10)
+                            
+                            Text("Continue with Google")
+                                .font(Font.custom("PerfectlyAmicable", size: 20))
+                                .fontWeight(.semibold)
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+                )
+                .buttonStyle(SocialLoginButtonStyle())
+                
+                
+                Button(
+                    action: {
+                        // Your action here
+                    },
+                    label: {
+                        HStack {
+                            Image("ic_apple") // Replace with your Google logo image name
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .padding(.trailing, 10)
+                            
+                            Text("Continue with Apple")
+                                .font(Font.custom("PerfectlyAmicable", size: 20))
+                                .fontWeight(.semibold)
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+                )
+                .buttonStyle(SocialLoginButtonStyle())
+                
+                
+                Button(
+                    action: {
+                        // Your action here
+                    },
+                    label: {
+                        HStack {
+                            Image("ic_facebook") // Replace with your Google logo image name
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .padding(.trailing, 10)
+                            
+                            Text("Continue with Facebook")
+                                .font(Font.custom("PerfectlyAmicable", size: 20))
+                                .fontWeight(.semibold)
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+                )
+                .buttonStyle(SocialLoginButtonStyle())
+            
+            }
             
             Spacer()
             
@@ -39,25 +111,47 @@ struct LoginView: View {
                 Button(
                     action: { },
                     label: {
-                        Text("Continue with Google").font(.system(size: 16.0, weight: .semibold))
+                        NavigationLink(destination: { }){
+                            Text("Sign up")
+                                .font(Font.custom("PerfectlyAmicable", size: 22))
+                                .fontWeight(.semibold)
+                        }
                     })
-                .buttonStyle(SocialLoginButtonStyle())
-                .frame(maxWidth: .infinity)
+                    .buttonStyle(ElevatedButtonStyle())
+                    .frame(maxWidth: .infinity)
                 
                 Button(
                     action: { },
                     label: {
-                        Text("Continue with Apple").font(.system(size: 16.0, weight: .semibold))
+                        NavigationLink(destination: { }){
+                            Text("Sign in")
+                                .font(Font.custom("PerfectlyAmicable", size: 22))
+                                .fontWeight(.semibold)
+                        }
                     })
-                .buttonStyle(SocialLoginButtonStyle())
+                .buttonStyle(OutlinedButtonStyle())
                 .frame(maxWidth: .infinity)
-            
             }
             
             Spacer()
             
+            HStack(alignment: .center, spacing: 8.0) {
+                Text("Privacy Policy")
+                    .font(Font.custom("PerfectlyAmicable", size: 18))
+                    .opacity(0.5)
+                
+                Text("·")
+                    .font(Font.custom("PerfectlyAmicable", size: 18))
+                    .opacity(0.5)
+                
+                Text("Terms of Service")
+                    .font(Font.custom("PerfectlyAmicable", size: 18))
+                    .opacity(0.5)
+            }
+            
         }.padding(.horizontal)
-            .navigationBarBackButtonHidden(true)
+            .padding(.vertical)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
