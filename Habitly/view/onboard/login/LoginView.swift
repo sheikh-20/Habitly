@@ -123,7 +123,7 @@ struct LoginView: View {
                 Button(
                     action: { },
                     label: {
-                        NavigationLink(destination: { }){
+                        NavigationLink(destination: LoginEmailView()){
                             Text("Sign in")
                                 .font(Font.custom("PerfectlyAmicable", size: 22))
                                 .fontWeight(.semibold)
