@@ -111,7 +111,7 @@ struct LoginView: View {
                 Button(
                     action: { },
                     label: {
-                        NavigationLink(destination: { }){
+                        NavigationLink(destination: SignupEmailView()){
                             Text("Sign up")
                                 .font(Font.custom("PerfectlyAmicable", size: 22))
                                 .fontWeight(.semibold)
