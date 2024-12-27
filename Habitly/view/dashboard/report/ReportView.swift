@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct ReportView: View {
+    var body: some View {
+        VStack {
+            Text("ReportView")
+        }
+    }
+}
+
+struct ReportView_Previews: PreviewProvider {
+    static var previews: some View {
+        ReportView()
+    }
+}

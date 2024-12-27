@@ -68,7 +68,7 @@ struct LoginEmailView: View {
                         .padding([.top, .leading, .trailing])
                     
                     HStack {
-                        Image(systemName: "lock.fill")  // Email icon from SF Symbols
+                        Image(systemName: "lock.fill")
                             .foregroundColor(.gray)
                         
                         if isPasswordVisible {
@@ -201,9 +201,10 @@ struct LoginEmailView: View {
                         )
                         .buttonStyle(SocialLoginButtonStyle())
                     }
+                    .padding(.horizontal)
                 }
-            }
-                
+            }.padding(.bottom, 100)
+            
             VStack {
                 
                 Spacer()
@@ -214,18 +215,16 @@ struct LoginEmailView: View {
                     HStack {
                         
                         Button(
-                            action: {
-                                //                        viewmodel.loginWithPassword(email: email, password: password)
-                            },
+                            action: { },
                             label: {
-                                NavigationLink(destination: { }) {
+                                NavigationLink(destination: HomLayoutView()) {
                                     Text("Sign In").fontWeight(.semibold)
                                 }
                             })
                         .buttonStyle(ElevatedButtonStyle())
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     }.padding(.horizontal)
-                }.background(Color.white)
+                }
             }
         }
         .navigationBarBackButtonHidden(true)
