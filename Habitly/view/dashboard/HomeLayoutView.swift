@@ -9,30 +9,89 @@ import Foundation
 import SwiftUI
 
 struct HomLayoutView: View {
+    
+    @State private var selectedTab = 0
+    
     var body: some View {
-        
-        TabView {
-            HomeView().tabItem {
-                Image(systemName: "house.fill")
-                Text("Home")
+        VStack {
+            
+            // TabView for Bottom Navigation
+            TabView(selection: $selectedTab) {
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                    .tag(0)
+                
+                MoodStatsView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Mood Stat")
+                    }
+                    .tag(1)
+                
+                ReportView()
+                    .tabItem {
+                        Image(systemName: "bookmark.fill")
+                        Text("Report")
+                    }
+                    .tag(2)
+                
+                MyHabitsView()
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("My Habits")
+                    }
+                    .tag(3)
+                
+                AccountView()
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("Account")
+                    }
+                    .tag(4)
             }
-            MoodStatsView().tabItem {
-                Image(systemName: "magnifyingglass")
-                Text("Mood Stat")
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "chevron.left")
+                        .foregroundColor(.white)
+                }
             }
-            ReportView().tabItem {
-                Image(systemName: "bookmark.fill")
-                Text("Report")
-            }
-            MyHabitsView().tabItem {
-                Image(systemName: "person.fill")
-                Text("My Habits")
-            }
-            AccountView().tabItem {
-                Image(systemName: "person.fill")
-                Text("Account")
-            }
-        }.navigationBarBackButtonHidden()
+            
+               ToolbarItem(placement: .principal) { // Centers the title
+                   Text(getTitle(for: selectedTab))
+                       .font(.title2)
+                       .fontWeight(.semibold)
+               }
+
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        // Handle settings action
+                    }) {
+                        Image(systemName: "ellipsis") // Settings icon
+                            .rotationEffect(.degrees(90))
+                            .foregroundColor(.white)
+                    }
+                }
+        }
+    }
+
+    // Function to set header title based on tab
+    func getTitle(for index: Int) -> String {
+        switch index {
+        case 0: return "Home"
+        case 1: return "Mood Stats"
+        case 2: return "Report"
+        case 3: return "My Habits"
+        case 4: return "Account"
+        default: return "Home"
+        }
     }
 }
 

@@ -251,7 +251,7 @@ struct SignupEmailView: View {
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Image(systemName: "chevron.left")
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                 }
             }
         }
